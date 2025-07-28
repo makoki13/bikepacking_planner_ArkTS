@@ -22,7 +22,7 @@ struct MainPage {
       })
 
       CustomButton({
-        label: 'Configuracion',
+        label: 'Configuración',
         targetPage: 'pages/Configuracion'
       })
 

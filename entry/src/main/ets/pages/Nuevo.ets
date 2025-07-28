@@ -4,7 +4,7 @@ import { BusinessError } from '@kit.BasicServicesKit'
 @Entry
 @Component
 struct Second {
-  @State message: string = 'Hi there';
+  @State message: string = 'Nuevo proyecto';
 
 
   build() {
