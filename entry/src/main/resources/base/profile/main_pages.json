@@ -1,0 +1,10 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Nuevo",
+    "pages/Actual",
+    "pages/Listado",
+    "pages/Configuracion",
+    "pages/Ayuda"
+  ]
+}
