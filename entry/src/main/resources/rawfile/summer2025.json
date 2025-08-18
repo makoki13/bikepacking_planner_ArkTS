@@ -1,0 +1,53 @@
+{
+    "version": 1.0,
+    "id_proyecto": 20251,
+    "notas": "",
+    "jornadas": [
+        {
+            "ordinal": 1,
+            "notas": "",
+            "fecha inicio": "2025/09/17",
+            "fecha final": "",
+            "tramos": [
+                {
+                    "ordinal": 1,
+                    "puntos": [
+                        {
+                            "ordinal": 1,
+                            "tipo": [{"tipo": "I", "descripcion": "Gandia"}],
+                            "notas": "",
+                            "kilometro": 0.0
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "ordinal": 2,
+            "notas": "",
+            "fecha inicio": "2025/09/18",
+            "fecha final": "",
+            "tramos": [
+            ]
+        },
+
+        {
+            "ordinal": 3,
+            "notas": "",
+            "fecha inicio": "2025/09/19",
+            "fecha final": "",
+            "tramos": [
+            ]
+        },
+
+        {
+            "ordinal": 4,
+            "notas": "",
+            "fecha inicio": "2025/09/20",
+            "fecha final": "",
+            "tramos": [
+            ]
+        }
+    ]
+}

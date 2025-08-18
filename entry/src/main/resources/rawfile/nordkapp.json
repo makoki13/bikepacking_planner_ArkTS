@@ -1,0 +1,86 @@
+{
+  "version": 1.0,
+  "id_proyecto": 1,
+  "notas": "",
+  "jornadas": [
+    {
+      "ordinal": 1,
+      "notas": "",
+      "fecha inicio": "2026/06/01",
+      "fecha final": "",
+      "tramos": [
+        {
+          "ordinal": 1,
+          "puntos": [
+            {
+              "ordinal": 1,
+              "tipo": [{"tipo": "I", "descripcion": "Gandia"}],
+              "notas": "",
+              "kilometro": 0.0
+            },
+            {
+              "ordinal": 2,
+              "tipo": [{"tipo": "P", "descripcion": "Cullera"}],
+              "notas": "",
+              "kilometro": 24.3
+            },
+            {
+              "ordinal": 3,
+              "tipo": [{"tipo": "D", "descripcion": "Inicio El Palmar"}],
+              "notas": "",
+              "kilometro": 30.4
+            },
+            {
+              "ordinal": 4,
+              "tipo": [{"tipo": "D", "descripcion": "Inicio Via Saler"}],
+              "notas": "",
+              "kilometro": 53.8
+            },
+            {
+              "ordinal": 5,
+              "tipo": [{"tipo": "P", "descripcion": "Valencia"}],
+              "notas": "",
+              "kilometro": 57.9
+            },
+            {
+              "ordinal": 6,
+              "tipo": [{"tipo": "D", "descripcion": "Inicio Via Churra"}],
+              "notas": "",
+              "kilometro": 68.4
+            },
+            {
+              "ordinal": 7,
+              "tipo": [{"tipo": "P", "descripcion": "Massamagrell"}],
+              "notas": "",
+              "kilometro": 77.9
+            },
+            {
+              "ordinal": 8,
+              "tipo": [{"tipo": "D", "descripcion": "Fin Via Churra"}],
+              "notas": "",
+              "kilometro": 83.9
+            },
+            {
+              "ordinal": 9,
+              "tipo": [{"tipo": "C", "descripcion": "Tunel Via Sagunto"}],
+              "notas": "",
+              "kilometro": 86.7
+            },
+            {
+              "ordinal": 10,
+              "tipo": [{"tipo": "P", "descripcion": "Sagunto"}],
+              "notas": "",
+              "kilometro": 92.1
+            },
+            {
+              "ordinal": 11,
+              "tipo": [{"tipo": "F", "descripcion": ""}],
+              "notas": "",
+              "kilometro": 97.4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

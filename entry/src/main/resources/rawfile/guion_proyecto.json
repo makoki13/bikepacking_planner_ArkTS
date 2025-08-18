@@ -1,0 +1,26 @@
+{
+  "version": 1.0,
+  "id_proyecto": "Int64",
+  "notas": "?Text",
+  "jornadas": [
+    {
+      "ordinal": "Int64",
+      "notas": "?Text",
+      "fecha inicio": "?Fecha",
+      "fecha final": "?Fecha",
+      "tramos": [
+        {
+          "ordinal": "Int64",
+          "puntos": [
+            {
+              "ordinal": "Int64",
+              "tipo": ["Tipo Punto: Tipo + ?descripcion"],
+              "notas": "?Text",
+              "kilometro": "Real con un decimal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
