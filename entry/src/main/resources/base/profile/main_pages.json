@@ -1,5 +1,6 @@
 {
   "src": [
+    "pages/Splash_Screen",
     "pages/Index",
     "pages/Nuevo",
     "pages/Actual",
