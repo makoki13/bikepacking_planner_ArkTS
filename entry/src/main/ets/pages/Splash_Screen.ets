@@ -9,31 +9,52 @@ struct SplashScreen {
   @State showSplash: boolean = true;
 
   build() {
-    Column() {
-      Image($r('app.media.startIcon')) // Asegúrate de tener una imagen splash_logo en /resources/media/
-        .width(200)
-        .height(200)
-        .margin({ bottom: 30 })
+    Stack() {
+      Image($r('app.media.startIcon'))
+        .objectFit(ImageFit.Fill)
+        .width('100vw')
+        .height('100vw')
+        .zIndex(1)
+        .opacity(0.4)
 
-      Text('Cargando...')
-        .fontSize(18)
-        .fontWeight(FontWeight.Medium)
-        .fontColor(Color.Gray)
+      Column() {
+        LoadingProgress()
+          .color(Color.Blue)
+          .width(70)
+          .height(70)
+          .margin({ bottom: 20 })
+          .zIndex(2) // Lo ponemos delante
+
+        // Texto de carga
+        Text('Loading...')
+          .fontSize(38)
+          .fontWeight(FontWeight.Bolder)
+          .fontColor(Color.Black)
+          .alignSelf(ItemAlign.Center)
+          .zIndex(2)
+      }
+      .width('100%')
+      .height('100%')
+      .justifyContent(FlexAlign.Center)
+      .alignItems(HorizontalAlign.Center)
+      .backgroundColor(Color.White)
+      .onAppear(() => {
+        console.info(`Antes de startSplash`)
+        //this.startSplash();
+        initAppData()
+        console.info(`Despues de startSplash`)
+      })
     }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-    .alignItems(HorizontalAlign.Center)
-    .backgroundColor(Color.White)
-    .onAppear(() => {
-      console.info(`Antes de startSplash`)
-      this.startSplash();
-    })
+    .padding(0)
+    .margin(0)
+    .width("100vw")
+    .height("100vw")
+    .layoutWeight(1)
   }
 
   private async startSplash() {
     // Tiempo mínimo de splash (2 segundos)
-    const minSplashTime = 2000;
+    /*const minSplashTime = 5000;
 
     // Iniciar carga de datos en segundo plano
     const loadDataPromise = this.loadInitialData();
@@ -56,7 +77,7 @@ struct SplashScreen {
       console.info(`Hemos saltado a la página principal`)
     }).catch((err: BusinessError) => {
       console.error(`No hemos podido saltar a la página principal`)
-    })
+    })*/
   }
 
   private async loadInitialData(): Promise<void> {
@@ -64,6 +85,7 @@ struct SplashScreen {
       const task = () => {
         try {
           // Simulación de carga pesada (API, DB, etc.)
+          console.info('Datos inicializados before');
           initAppData(); // Tu lógica de inicialización
           resolve();
         } catch (err) {
