@@ -1,5 +1,5 @@
 // src/main/ets/pages/MainPage.ets
-import { CustomButton } from 'ets/pages/CustomBoton'
+import { CustomButton } from 'ets/components/CustomBoton'
 
 @Entry
 @Component

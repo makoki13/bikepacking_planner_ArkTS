@@ -40,7 +40,7 @@ struct SplashScreen {
       .backgroundColor(Color.White)
       .onAppear(() => {
         console.info(`Antes de startSplash`)
-        //this.startSplash();
+        this.startSplash();
         initAppData()
         console.info(`Despues de startSplash`)
       })
@@ -54,7 +54,7 @@ struct SplashScreen {
 
   private async startSplash() {
     // Tiempo mínimo de splash (2 segundos)
-    /*const minSplashTime = 5000;
+    const minSplashTime = 5000;
 
     // Iniciar carga de datos en segundo plano
     const loadDataPromise = this.loadInitialData();
@@ -77,7 +77,7 @@ struct SplashScreen {
       console.info(`Hemos saltado a la página principal`)
     }).catch((err: BusinessError) => {
       console.error(`No hemos podido saltar a la página principal`)
-    })*/
+    })
   }
 
   private async loadInitialData(): Promise<void> {
