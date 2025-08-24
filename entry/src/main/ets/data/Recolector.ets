@@ -1,4 +1,4 @@
-type IdProyecto = number
+export type IdProyecto = number
 class clsProyecto {
   id: IdProyecto = 0
   nombre: string = ""
@@ -6,13 +6,13 @@ class clsProyecto {
 export type Proyecto = clsProyecto
 export type ListaProyectos = Array<Proyecto>
 
-type IdJornada = number
+export type IdJornada = number
 class clsJornada {
   id: IdJornada = 0
   nombre: string = ""
 }
-type Jornada = clsJornada
-type ListaJornadas = Array<IdJornada>
+export type Jornada = clsJornada
+export type ListaJornadas = Array<IdJornada>
 
 interface IRecolector {
   getListaProyectos(): ListaProyectos
@@ -43,12 +43,12 @@ export class Recolector implements IRecolector {
     }
   }
 
-  getListaProyectos(): ListaProyectos {
+  public getListaProyectos(): ListaProyectos {
     this.checkGestor();
     return this.gestor!.getListaProyectos(); // El '!' indica que ya verificamos
   }
 
-  getProyecto(idProyecto: IdProyecto): Proyecto {
+  public getProyecto(idProyecto: IdProyecto): Proyecto {
     this.checkGestor();
     return this.gestor!.getProyecto(idProyecto);
   }
