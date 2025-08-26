@@ -2,6 +2,8 @@ export type IdProyecto = number
 class clsProyecto {
   id: IdProyecto = 0
   nombre: string = ""
+  fechaInicio: Date | null = null;
+  actual: boolean = false
 }
 export type Proyecto = clsProyecto
 export type ListaProyectos = Array<Proyecto>
@@ -73,14 +75,14 @@ export class RecolectorJson extends Recolector implements IRecolector{
   getListaProyectos(): ListaProyectos {
     // Aquí iría la lógica real (ej: cargar de JSON)
     return [
-      { id: 1, nombre: "Proyecto A" },
-      { id: 2, nombre: "Proyecto B" }
+      { id: 1, nombre: "Proyecto A", fechaInicio: new Date('2025/09/17'), actual: true },
+      { id: 2, nombre: "Proyecto B" , fechaInicio: null, actual: false}
     ];
   }
 
   getProyecto(idProyecto: IdProyecto): Proyecto {
     const proyectos = this.getListaProyectos();
-    return proyectos.find(p => p.id === idProyecto) || { id: 0, nombre: "" };
+    return proyectos.find(p => p.id === idProyecto) || { id: 0, nombre: "", fechaInicio: null, actual: false };
   }
 
   getListaJornadas(idProyecto: IdProyecto): ListaJornadas {
@@ -102,11 +104,11 @@ export class RecolectorSqlLite extends Recolector implements IRecolector {
 
   // Aquí iría la lógica real con base de datos
   getListaProyectos(): ListaProyectos {
-    return [{ id: 99, nombre: "SQLite Project" }];
+    return [{ id: 99, nombre: "SQLite Project", fechaInicio: null, actual: false }];
   }
 
   getProyecto(idProyecto: IdProyecto): Proyecto {
-    return { id: idProyecto, nombre: `Proyecto ${idProyecto}` };
+    return { id: idProyecto, nombre: `Proyecto ${idProyecto}`, fechaInicio: null, actual: false };
   }
 
   getListaJornadas(idProyecto: IdProyecto): ListaJornadas {

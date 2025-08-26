@@ -1,5 +1,6 @@
 // Second.ets
 import { BusinessError } from '@kit.BasicServicesKit'
+import { VisorListaProyectos } from '../components/VisorListaProyectos'
 
 @Entry
 @Component
@@ -11,8 +12,13 @@ struct Second {
     Row() {
       Column() {
         Text(this.message)
-          .fontSize(50)
+          .fontSize(20)
           .fontWeight(FontWeight.Bold)
+          .height("auto")
+
+        VisorListaProyectos()
+          .height("80%")
+
         Button() {
           Text('Back')
             .fontSize(30)
@@ -20,9 +26,10 @@ struct Second {
         }
         .type(ButtonType.Capsule)
         .margin({
-          top: 20
+          top: 10
         })
-        .backgroundColor('#0D9FFB')
+        .backgroundColor('F0CAB0')
+        .fontColor('#FFFFFF')
         .width('40%')
         .height('5%')
         .onClick(() => {
@@ -43,6 +50,6 @@ struct Second {
       }
       .width('100%')
     }
-    .height('100%')
+    .height('100vw')
   }
 }

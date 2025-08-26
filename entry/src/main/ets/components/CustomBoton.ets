@@ -12,7 +12,7 @@ export struct CustomButton {
     Button(this.label)
       .width(200)
       .height(50)
-      .backgroundColor(Color.Green)
+      .backgroundColor("F0CAB0")
       .fontColor('#FFFFFF')
       .borderRadius(8)
       .onClick(() => {
