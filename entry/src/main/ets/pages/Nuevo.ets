@@ -1,5 +1,6 @@
 // Second.ets
 import { BusinessError } from '@kit.BasicServicesKit'
+import { FormularioProyecto } from '../components/FormularioProyecto';
 
 @Entry
 @Component
@@ -10,9 +11,7 @@ struct Second {
   build() {
     Row() {
       Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
+        FormularioProyecto()
         Button() {
           Text('Back')
             .fontSize(30)

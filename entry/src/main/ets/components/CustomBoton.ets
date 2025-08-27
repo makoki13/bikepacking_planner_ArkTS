@@ -16,13 +16,13 @@ export struct CustomButton {
       .fontColor('#FFFFFF')
       .borderRadius(8)
       .onClick(() => {
-        console.info('Hizo click')
+        //console.info('Hizo click')
         let uiContext: UIContext = this.getUIContext()
         let router = uiContext.getRouter()
         router.pushUrl({url: this.targetPage}).then(() => {
-          console.info(`Hemos saltado a la página ${this.targetPage}`)
+          //console.info(`Hemos saltado a la página ${this.targetPage}`)
         }).catch((err: BusinessError) => {
-          console.error(`No hemos podido saltar a la página ${this.targetPage}`)
+          //console.error(`No hemos podido saltar a la página ${this.targetPage}`)
         })
       })
   }

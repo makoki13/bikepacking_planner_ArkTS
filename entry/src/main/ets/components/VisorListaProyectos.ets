@@ -38,7 +38,14 @@ export struct VisorListaProyectos {
 
   build() {
     Column() {
-      List({ space: 8 }) {
+      Text('Proyectos')
+        .fontSize(38)
+        .fontWeight(FontWeight.Bolder)
+        .fontColor(Color.Black)
+        .alignSelf(ItemAlign.Center)
+        .zIndex(2)
+        .margin({ bottom: 10 })
+      List({ space: 2 }) {
         ForEach(this.proyectos, (proyecto: Proyecto) => {
           ListItem() {
             Row() {
@@ -51,22 +58,23 @@ export struct VisorListaProyectos {
 
               Column() {
                 Text(proyecto.nombre)
-                  .fontSize(16)
-                  .fontWeight(FontWeight.Medium)
+                  .fontSize(20)
+                  .fontWeight(FontWeight.Bolder)
                 if (proyecto.fechaInicio) {
                   Text(`Inicio: ${proyecto.fechaInicio.toLocaleDateString()}`)
-                    .fontSize(12)
+                    .fontSize(14)
                     .fontColor(Color.Black)
                 }
               }
               .layoutWeight(1)
-              .margin({ left: 12 })
-              .backgroundColor('#BCDEFF')
+              .margin({ left: 3 })
+              .backgroundColor("#F0CCBB")
+              .padding(10)
             }
-            .padding(12)
-            .backgroundColor(Color.White)
+            .padding(3)
+            .backgroundColor(Color.Blue)
             .borderRadius(8)
-            .margin({ right: 16, left: 16, top: 16, bottom: 16 })
+            .margin({ right: 16, left: 16, top: 1, bottom: 1 })
           }
         },  (proyecto: Proyecto) => proyecto.id.toString())
 
@@ -89,7 +97,7 @@ export struct VisorListaProyectos {
         // Si no hay más datos
         if (this.noMasDatos && !this.cargando && this.proyectos.length > 0) {
           ListItem() {
-            Text('No hay más aventuras')
+            Text('No hay más proyectos')
               .fontSize(14)
               .fontColor(Color.Gray)
               .textAlign(TextAlign.Center)
@@ -99,12 +107,12 @@ export struct VisorListaProyectos {
         }
       }
       .listDirection(Axis.Vertical)
-      .divider({
-        strokeWidth: 1,
-        color: 0xFFE0E0E0,
-        startMargin: 16,
-        endMargin: 16
-      })
+      //.divider({
+      //  strokeWidth: 1,
+      //  color: 0xFFE0E0E0,
+      //  startMargin: 16,
+      //  endMargin: 16
+      //})
       .onReachEnd(() => {
         console.info('Fin de la lista alcanzado');
         this.cargarDatos();

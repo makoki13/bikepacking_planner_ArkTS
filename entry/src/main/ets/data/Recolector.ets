@@ -74,10 +74,11 @@ export class RecolectorJson extends Recolector implements IRecolector{
 
   getListaProyectos(): ListaProyectos {
     // Aquí iría la lógica real (ej: cargar de JSON)
-    return [
-      { id: 1, nombre: "Proyecto A", fechaInicio: new Date('2025/09/17'), actual: true },
-      { id: 2, nombre: "Proyecto B" , fechaInicio: null, actual: false}
-    ];
+    let elementos: Array<Proyecto> = []
+    for (let i = 0; i < 100; i++ ) {
+      elementos[i] = {id: i, nombre: "Proyecto " + i, fechaInicio: new Date(2025, 8, 17 + i), actual: false}
+    }
+    return elementos
   }
 
   getProyecto(idProyecto: IdProyecto): Proyecto {

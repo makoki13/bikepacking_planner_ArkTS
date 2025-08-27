@@ -39,10 +39,10 @@ struct SplashScreen {
       .alignItems(HorizontalAlign.Center)
       .backgroundColor(Color.White)
       .onAppear(() => {
-        console.info(`Antes de startSplash`)
+        //console.info(`Antes de startSplash`)
         this.startSplash();
         initAppData()
-        console.info(`Despues de startSplash`)
+        //console.info(`Despues de startSplash`)
       })
     }
     .padding(0)
@@ -72,11 +72,11 @@ struct SplashScreen {
     // Navegar a la página principal
     let uiContext: UIContext = this.getUIContext()
     let router = uiContext.getRouter()
-    console.info(`Antes de pushUrl`)
+    //console.info(`Antes de pushUrl`)
     router.pushUrl({url: 'pages/Index'}).then(() => {
-      console.info(`Hemos saltado a la página principal`)
+      //console.info(`Hemos saltado a la página principal`)
     }).catch((err: BusinessError) => {
-      console.error(`No hemos podido saltar a la página principal`)
+      //console.error(`No hemos podido saltar a la página principal`)
     })
   }
 
@@ -85,7 +85,7 @@ struct SplashScreen {
       const task = () => {
         try {
           // Simulación de carga pesada (API, DB, etc.)
-          console.info('Datos inicializados before');
+          //console.info('Datos inicializados before');
           initAppData(); // Tu lógica de inicialización
           resolve();
         } catch (err) {
