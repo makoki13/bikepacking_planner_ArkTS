@@ -117,9 +117,12 @@ export struct VisorListaProyectos {
         console.info('Fin de la lista alcanzado');
         this.cargarDatos();
       })
-      .height('100%')
+      .height('100vw')
+      .borderWidth(2)
+      .borderColor(Color.Blue)
     }
     .width('100%')
+    .height('100%')
     .backgroundColor(Color.White)
   }
 }

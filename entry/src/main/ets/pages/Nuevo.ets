@@ -1,6 +1,6 @@
 // Second.ets
 import { BusinessError } from '@kit.BasicServicesKit'
-import { FormularioProyecto } from '../components/FormularioProyecto';
+import { NuevoProyecto } from '../components/NuevoProyecto';
 
 @Entry
 @Component
@@ -11,19 +11,23 @@ struct Second {
   build() {
     Row() {
       Column() {
-        FormularioProyecto()
+        NuevoProyecto({indice: undefined})
+          .height("80%")
         Button() {
           Text('Back')
             .fontSize(30)
             .fontWeight(FontWeight.Bold)
+            .fontColor(Color.White)
         }
         .type(ButtonType.Capsule)
         .margin({
-          top: 20
+          top: 10,
+          bottom: 10
         })
+        .borderWidth(2)
         .backgroundColor('#0D9FFB')
         .width('40%')
-        .height('5%')
+        .height('6%')
         .onClick(() => {
           console.info(`Succeeded in clicking the 'Back' button.`)
           // Obtain UIContext.
@@ -41,6 +45,7 @@ struct Second {
         })
       }
       .width('100%')
+      //.backgroundColor(Color.Green)
     }
     .height('100%')
   }

@@ -41,7 +41,7 @@ struct SplashScreen {
       .onAppear(() => {
         //console.info(`Antes de startSplash`)
         this.startSplash();
-        initAppData()
+        //initAppData()
         //console.info(`Despues de startSplash`)
       })
     }
@@ -54,7 +54,7 @@ struct SplashScreen {
 
   private async startSplash() {
     // Tiempo mínimo de splash (2 segundos)
-    const minSplashTime = 5000;
+    const minSplashTime = 3000;
 
     // Iniciar carga de datos en segundo plano
     const loadDataPromise = this.loadInitialData();

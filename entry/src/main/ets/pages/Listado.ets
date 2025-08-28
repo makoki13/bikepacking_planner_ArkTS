@@ -5,19 +5,17 @@ import { VisorListaProyectos } from '../components/VisorListaProyectos'
 @Entry
 @Component
 struct Second {
-  @State message: string = 'Listado';
-
-
   build() {
     Row() {
       Column() {
-        Text(this.message)
-          .fontSize(20)
-          .fontWeight(FontWeight.Bold)
-          .height("auto")
 
         VisorListaProyectos()
-          .height("80%")
+          .height("85%")
+
+        Flex() {
+          // Este espacio vacío crece y empuja lo de abajo al final
+        }
+        .layoutWeight(1)
 
         Button() {
           Text('Back')
@@ -28,6 +26,7 @@ struct Second {
         .margin({
           top: 10
         })
+        .align(Alignment.Bottom)
         .backgroundColor('F0CAB0')
         .fontColor('#FFFFFF')
         .width('40%')
@@ -49,7 +48,10 @@ struct Second {
         })
       }
       .width('100%')
+      .height('100vw')
+      //.backgroundColor(Color.Red)
     }
+    //.backgroundColor(Color.Green)
     .height('100vw')
   }
 }
